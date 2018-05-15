@@ -1,0 +1,11 @@
+docker ps --> list containers running
+docker ps -a --> list all
+docker image ls --> list images
+docker history [image] --> show how the image was built
+docker inspect C_ID --> show jason file on the parameters of a container
+docker logs C_ID --> show logs for container, you can redirect using log4j or similar loggers
+docker run -it [image] --> run the container in interactive mode and login into the shell
+docker run [image] [CMD] --> run a command within a container
+docker run [image] -p 8888:8080 --> map the container port 8888 to host port 8080
+docker run -d --> run in detattached mode
+
