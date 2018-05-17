@@ -1,0 +1,24 @@
+version: '3'
+services:
+  dockerapp:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+    network:
+      - front
+
+  redis:
+    image: redis:3.2.0
+    network:
+      - back
+  networks:
+     front: 
+        driver: custom-driver-1
+     back:
+         driver: custom-driver-2
+         driver_opts:
+                 foo: "1"
+                 bar: "2"
+

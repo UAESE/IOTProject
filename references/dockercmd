@@ -16,4 +16,34 @@ docker-machine list --> get the IP of the machine and port mapping
 docker login --> to login in dockerhub
 docker push -t [tag] [image] --> image should match the repo
 docker exec -it [C_ID] bash --> run bash command in the container
+docker run -d -p [] --link [source_containter] [destination_mage container] --> allows the destination container to use the name of the source container in applications running. This is simply creating an entry in /etc/hosts file for in the destination container for the source container. In this case, you dont need to expose the port for the source container and the link will be established betweent eh soruce and the destination container
+docker-compose version --> verifying that composer is installed
+docker-compose up --> starting the composer service from docker-compose.yml file, which contains all services and containers need to be running, linking is given and no need to explicitly define in new version
+docker-compose up -d --> running in the background
+docker-compose ps --> check containers managed by composer
+docker-compose logs [-f] [container name]--> optional arguments to specify the appended or tail log as it grows and container specific log
+docker-compose stop
+docker-compose rm  --> removing container
+docker-compose build --> if you run composer, it will not rebuild the image if it exists even if you have some changes in the docker file, the [build] option will force it to recreate the image and therefore the container
+
+# Docker Network (none, bridge, host, 
+docker network ls  --> list all nw defined
+docker network inspect  --> inspect a certain nw in greater details
+docker --it --net none [image] --> running in isolated network, loopback interface is assigned to the container
+# bridge is defaule and no need to specify --net, an etherner if will be created, and containers can communicate with each other inside this bridge network, and also can reach outside world
+# By default two bridge networks cant communicate with each other
+docker network create --driver bridge --name my_bridge --> create custom bridge network
+docker network ls
+docker network inspect my_bridge
+docker run -it ... --net my_bridge [..] --> running an image inside a certain network
+docker network connet bridge [container] --> connect the container to the network bridge, and an if will be created for this container inside the netwrok specified
+docker network disconned network [container] --> remove the interface from the container
+# open network or host network, not recommended for production and it uses the host if
+docker run -d --name cont_name --net host busybox sleep 1000 --> running cont_name in host mode from image busybox and issue a sleep 1000 command
+#Overlay network to create a network across hosts, swarm or key value store is needed and no much config is done
+#For overlay check https://docs.docker.com/network/overlay-standalone.swarm/#prerequisites
+
+
+
+
 
