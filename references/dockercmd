@@ -1,3 +1,10 @@
+# To avoid running sudo everytime in linux, in windows add your name to docker gorup, then relogin to the session
+#
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "/home/$USER/.docker" -R
+###### 
+
+
 docker ps --> list containers running
 docker ps -a --> list all
 docker image ls --> list images
