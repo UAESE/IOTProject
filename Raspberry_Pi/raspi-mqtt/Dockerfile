@@ -1,6 +1,5 @@
 # Pull base image
 FROM resin/rpi-raspbian:jessie
-MAINTAINER Pascal de Vink <pascal.de.vink@gmail.com>
 
 RUN apt-get update && apt-get install -y wget
 
