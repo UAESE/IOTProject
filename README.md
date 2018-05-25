@@ -9,9 +9,9 @@ This project is a collaborative efforts between the UAE SE to create something m
 - Automating every step of project deployment
 - LAMP or similar to built a small web services
 
-# Currently subscribed:
-1. Ahmad Muammar
-2. Ahmed Gamal
-3. Mohamed Mysara
-4. Andre Agayby
+# Currently subscribed (alphabetically):
+1. Ahmad Gamal
+2. Ahmed Muammar
+3. Andre Agayby
+4. Mohamed Mysara
 5. Yahya El Shazly
