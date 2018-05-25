@@ -3,7 +3,10 @@
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chmod g+rwx "/home/$USER/.docker" -R
 ###### 
-
+### some info about docker engine and installation
+docker --version
+docker info --> More details 
+###
 
 docker ps --> list containers running
 docker ps -a --> list all
