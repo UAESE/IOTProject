@@ -3,12 +3,17 @@
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chmod g+rwx "/home/$USER/.docker" -R
 ###### 
-
+### some info about docker engine and installation
+docker --version
+docker info --> More details 
+###
 
 docker ps --> list containers running
 docker ps -a --> list all
 docker image ls --> list images
 docker images
+docker search {keyword]  --> searching docker register for a certain function
+docker pull [image] --> download image into the local engine
 docker history [image] --> show how the image was built
 docker inspect C_ID --> show jason file on the parameters of a container
 docker logs C_ID --> show logs for container, you can redirect using log4j or similar loggers
