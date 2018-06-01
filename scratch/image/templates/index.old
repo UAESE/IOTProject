@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #4CAF50;
+        }
+        button {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-decoration: none;
+                margin:auto;
+                cursor: pointer;
+        }  
+        
+        </style>
+</head>
+<body>
+    <div>
+            <h1>Welcome to the IOTProject</h1> <br><br>
+            <div align="center">
+                    <button onclick="prevImage()" > << Prev </button>
+                    <button onclick="nextImage()"> Next >> </button>
+            </div>v<br>
+            
+            <img  id="im" width=500px src="/static/iot-img1.jpeg">
+            
+           
+        
+    </div>
+
+    <script type="text/javascript">
+        var images=["/static/iot-img1.jpeg",
+        "/static/iot-img2.jpeg",
+        "/static/iot-img3.jpeg"]
+        var loc=1;
+        function nextImage(){
+            if(loc==3){
+                loc=0;
+            }
+            document.getElementById("im").src=images[loc++];
+        }
+        function prevImage(){
+            if(loc==-1){
+                loc=2;
+            }
+            
+            
+            document.getElementById("im").src=images[loc--];
+        }
+    
+    </script>
+</body>
+</html>
