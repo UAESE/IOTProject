@@ -19,7 +19,7 @@ def hello():
     url='http://dserver:5001/team'
     response=requests.get(url)
     data=response.json()
-    empID = randrange(1,5)
+    empID = randrange(0,6)
     usr=data['team'][empID]['name']
  
     return render_template('index.html',name=usr)
