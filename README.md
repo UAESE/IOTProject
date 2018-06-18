@@ -13,5 +13,9 @@ This project is a collaborative efforts between the UAE SE to create something m
 1. Ahmad Gamal
 2. Ahmed Muammar
 3. Andre Agayby
-4. Mohamed Mysara
-5. Yahya El Shazly
+4. Hani Khalaf
+5. Hazim Abu Shaban
+5. Karim Haddara
+6. Mohamed Mysara
+6. Rami Akabawi
+6. Yahya El Shazly
